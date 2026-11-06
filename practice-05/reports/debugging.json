@@ -1,0 +1,85 @@
+{
+  "pauses": [
+    {
+      "stage": "before fetch",
+      "values": {
+        "url": "http://127.0.0.1:53572/api/tasks/25",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json"
+        }
+      }
+    },
+    {
+      "stage": "Response",
+      "values": {
+        "url": "http://127.0.0.1:53572/api/tasks/25",
+        "status": 200,
+        "ok": true,
+        "contentType": "application/json; charset=utf-8"
+      }
+    },
+    {
+      "stage": "before json",
+      "values": {
+        "url": "http://127.0.0.1:53572/api/tasks/25",
+        "status": 200,
+        "ok": true,
+        "contentType": "application/json; charset=utf-8"
+      }
+    },
+    {
+      "stage": "before fetch",
+      "values": {
+        "url": "http://127.0.0.1:53572/api/tasks/999",
+        "method": "GET",
+        "headers": {
+          "Accept": "application/json"
+        }
+      }
+    },
+    {
+      "stage": "Response",
+      "values": {
+        "url": "http://127.0.0.1:53572/api/tasks/999",
+        "status": 404,
+        "ok": false,
+        "contentType": "application/json; charset=utf-8"
+      }
+    },
+    {
+      "stage": "HTTP error",
+      "values": {
+        "url": "http://127.0.0.1:53572/api/tasks/999",
+        "status": 404,
+        "ok": false,
+        "error": {
+          "code": "TASK_NOT_FOUND",
+          "message": "Задача с id 999 не найдена.",
+          "details": {
+            "id": 999
+          }
+        }
+      }
+    }
+  ],
+  "result": {
+    "success": {
+      "data": {
+        "id": 25,
+        "title": "Исправить обработку ошибок",
+        "completed": true,
+        "priority": "high",
+        "categoryId": 2
+      }
+    },
+    "error": {
+      "kind": "http",
+      "status": 404,
+      "code": "TASK_NOT_FOUND",
+      "details": {
+        "id": 999
+      }
+    }
+  }
+}

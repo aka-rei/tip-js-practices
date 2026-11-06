@@ -1,0 +1,399 @@
+{
+  "browser": "156.0.4314.58",
+  "common": [
+    {
+      "label": "0: reset",
+      "ids": [
+        1,
+        4,
+        7,
+        10
+      ],
+      "stats": [
+        "4",
+        "2",
+        "2",
+        "50.0%",
+        "4"
+      ],
+      "storage": null
+    },
+    {
+      "label": "1: add 20",
+      "ids": [
+        1,
+        4,
+        7,
+        10,
+        20
+      ],
+      "stats": [
+        "5",
+        "2",
+        "3",
+        "40.0%",
+        "5"
+      ],
+      "storage": "{\"version\":1,\"tasks\":[{\"id\":1,\"title\":\"Изучить функции\",\"completed\":true,\"priority\":\"medium\"},{\"id\":4,\"title\":\"Подготовить модель задач\",\"completed\":false,\"priority\":\"high\"},{\"id\":7,\"title\":\"Проверить методы массивов\",\"completed\":false,\"priority\":\"low\"},{\"id\":10,\"title\":\"Оформить README\",\"completed\":true,\"priority\":\"medium\"},{\"id\":20,\"title\":\"Изучить localStorage\",\"completed\":false,\"priority\":\"high\"}]}"
+    },
+    {
+      "label": "2: duplicate 4",
+      "ids": [
+        1,
+        4,
+        7,
+        10,
+        20
+      ],
+      "stats": [
+        "5",
+        "2",
+        "3",
+        "40.0%",
+        "5"
+      ],
+      "storage": "{\"version\":1,\"tasks\":[{\"id\":1,\"title\":\"Изучить функции\",\"completed\":true,\"priority\":\"medium\"},{\"id\":4,\"title\":\"Подготовить модель задач\",\"completed\":false,\"priority\":\"high\"},{\"id\":7,\"title\":\"Проверить методы массивов\",\"completed\":false,\"priority\":\"low\"},{\"id\":10,\"title\":\"Оформить README\",\"completed\":true,\"priority\":\"medium\"},{\"id\":20,\"title\":\"Изучить localStorage\",\"completed\":false,\"priority\":\"high\"}]}",
+      "error": "Задача с таким ID уже существует."
+    },
+    {
+      "label": "3: edit 4",
+      "ids": [
+        1,
+        4,
+        7,
+        10,
+        20
+      ],
+      "stats": [
+        "5",
+        "2",
+        "3",
+        "40.0%",
+        "5"
+      ],
+      "storage": "{\"version\":1,\"tasks\":[{\"id\":1,\"title\":\"Изучить функции\",\"completed\":true,\"priority\":\"medium\"},{\"id\":4,\"title\":\"Подготовить форму задач\",\"completed\":false,\"priority\":\"low\"},{\"id\":7,\"title\":\"Проверить методы массивов\",\"completed\":false,\"priority\":\"low\"},{\"id\":10,\"title\":\"Оформить README\",\"completed\":true,\"priority\":\"medium\"},{\"id\":20,\"title\":\"Изучить localStorage\",\"completed\":false,\"priority\":\"high\"}]}"
+    },
+    {
+      "label": "4: toggle 7",
+      "ids": [
+        1,
+        4,
+        7,
+        10,
+        20
+      ],
+      "stats": [
+        "5",
+        "3",
+        "2",
+        "60.0%",
+        "5"
+      ],
+      "storage": "{\"version\":1,\"tasks\":[{\"id\":1,\"title\":\"Изучить функции\",\"completed\":true,\"priority\":\"medium\"},{\"id\":4,\"title\":\"Подготовить форму задач\",\"completed\":false,\"priority\":\"low\"},{\"id\":7,\"title\":\"Проверить методы массивов\",\"completed\":true,\"priority\":\"low\"},{\"id\":10,\"title\":\"Оформить README\",\"completed\":true,\"priority\":\"medium\"},{\"id\":20,\"title\":\"Изучить localStorage\",\"completed\":false,\"priority\":\"high\"}]}"
+    },
+    {
+      "label": "5: delete 1",
+      "ids": [
+        4,
+        7,
+        10,
+        20
+      ],
+      "stats": [
+        "4",
+        "2",
+        "2",
+        "50.0%",
+        "4"
+      ],
+      "storage": "{\"version\":1,\"tasks\":[{\"id\":4,\"title\":\"Подготовить форму задач\",\"completed\":false,\"priority\":\"low\"},{\"id\":7,\"title\":\"Проверить методы массивов\",\"completed\":true,\"priority\":\"low\"},{\"id\":10,\"title\":\"Оформить README\",\"completed\":true,\"priority\":\"medium\"},{\"id\":20,\"title\":\"Изучить localStorage\",\"completed\":false,\"priority\":\"high\"}]}"
+    },
+    {
+      "label": "6: reload",
+      "ids": [
+        4,
+        7,
+        10,
+        20
+      ],
+      "stats": [
+        "4",
+        "2",
+        "2",
+        "50.0%",
+        "4"
+      ],
+      "storage": "{\"version\":1,\"tasks\":[{\"id\":4,\"title\":\"Подготовить форму задач\",\"completed\":false,\"priority\":\"low\"},{\"id\":7,\"title\":\"Проверить методы массивов\",\"completed\":true,\"priority\":\"low\"},{\"id\":10,\"title\":\"Оформить README\",\"completed\":true,\"priority\":\"medium\"},{\"id\":20,\"title\":\"Изучить localStorage\",\"completed\":false,\"priority\":\"high\"}]}"
+    },
+    {
+      "label": "7: reset",
+      "ids": [
+        1,
+        4,
+        7,
+        10
+      ],
+      "stats": [
+        "4",
+        "2",
+        "2",
+        "50.0%",
+        "4"
+      ],
+      "storage": null
+    }
+  ],
+  "variant": [
+    {
+      "label": "initial",
+      "ids": [
+        11,
+        23,
+        37,
+        41,
+        58,
+        64
+      ],
+      "stats": [
+        "6",
+        "1",
+        "5",
+        "16.7%",
+        "6"
+      ],
+      "storage": null
+    },
+    {
+      "label": "add 75",
+      "ids": [
+        11,
+        23,
+        37,
+        41,
+        58,
+        64,
+        75
+      ],
+      "stats": [
+        "7",
+        "1",
+        "6",
+        "14.3%",
+        "7"
+      ],
+      "storage": null
+    },
+    {
+      "label": "edit 23",
+      "ids": [
+        11,
+        23,
+        37,
+        41,
+        58,
+        64,
+        75
+      ],
+      "stats": [
+        "7",
+        "1",
+        "6",
+        "14.3%",
+        "7"
+      ],
+      "storage": null
+    },
+    {
+      "label": "delete 37",
+      "ids": [
+        11,
+        23,
+        41,
+        58,
+        64,
+        75
+      ],
+      "stats": [
+        "6",
+        "1",
+        "5",
+        "16.7%",
+        "6"
+      ],
+      "storage": null
+    },
+    {
+      "label": "reload",
+      "ids": [
+        11,
+        23,
+        41,
+        58,
+        64,
+        75
+      ],
+      "stats": [
+        "6",
+        "1",
+        "5",
+        "16.7%",
+        "6"
+      ],
+      "storage": null
+    },
+    {
+      "label": "reset",
+      "ids": [
+        11,
+        23,
+        37,
+        41,
+        58,
+        64
+      ],
+      "stats": [
+        "6",
+        "1",
+        "5",
+        "16.7%",
+        "6"
+      ],
+      "storage": null
+    }
+  ],
+  "experiments": [
+    {
+      "count": 0,
+      "valid": false
+    },
+    {
+      "log": "submit получен, но прикладная проверка отклонила значение.",
+      "error": "Название не должно состоять только из пробелов."
+    },
+    {
+      "log": "submit.defaultPrevented: true\ntypeof FormData title: string\ntypeof localStorage value: string\n{\n  \"value\": {\n    \"title\": \"Доклад\",\n    \"priority\": \"low\"\n  },\n  \"serialized\": \"{\\\"title\\\":\\\"Доклад\\\",\\\"priority\\\":\\\"low\\\"}\"\n}"
+    },
+    {
+      "log": "JSON прочитан успешно:\n{\n  \"raw\": \"{\\\"title\\\":\\\"Доклад\\\",\\\"priority\\\":\\\"low\\\"}\",\n  \"parsed\": {\n    \"title\": \"Доклад\",\n    \"priority\": \"low\"\n  }\n}"
+    },
+    {
+      "log": "JSON.parse завершился ошибкой:\nExpected property name or '}' in JSON at position 1 (line 1 column 2)\n{\n  \"raw\": \"{broken-json\"\n}"
+    }
+  ],
+  "debugging": [
+    {
+      "draft": {
+        "id": "20",
+        "title": " Изучить localStorage ",
+        "priority": "high"
+      },
+      "validated": {
+        "ok": true,
+        "value": {
+          "id": 20,
+          "title": "Изучить localStorage",
+          "priority": "high"
+        }
+      }
+    },
+    {
+      "draft": {
+        "id": "20",
+        "title": " Изучить localStorage ",
+        "priority": "high"
+      },
+      "validated": {
+        "ok": true,
+        "value": {
+          "id": 20,
+          "title": "Изучить localStorage",
+          "priority": "high"
+        }
+      },
+      "result": {
+        "ok": true,
+        "tasks": [
+          {
+            "id": 1,
+            "title": "Изучить функции",
+            "completed": true,
+            "priority": "medium"
+          },
+          {
+            "id": 4,
+            "title": "Подготовить модель задач",
+            "completed": false,
+            "priority": "high"
+          },
+          {
+            "id": 7,
+            "title": "Проверить методы массивов",
+            "completed": false,
+            "priority": "low"
+          },
+          {
+            "id": 10,
+            "title": "Оформить README",
+            "completed": true,
+            "priority": "medium"
+          },
+          {
+            "id": 20,
+            "title": "Изучить localStorage",
+            "completed": false,
+            "priority": "high"
+          }
+        ]
+      }
+    },
+    {
+      "draft": {
+        "id": "4",
+        "title": "Повторный ID",
+        "priority": "medium"
+      },
+      "validated": {
+        "ok": false,
+        "errors": {
+          "id": "Задача с таким ID уже существует."
+        }
+      }
+    }
+  ],
+  "emptyReload": {
+    "label": "empty reload",
+    "ids": [],
+    "stats": [
+      "0",
+      "0",
+      "0",
+      "0.0%",
+      "0"
+    ],
+    "storage": "{\"version\":1,\"tasks\":[]}"
+  },
+  "corrupt": "Не удалось прочитать сохранённые задачи: Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+  "independent": {
+    "label": "demo unchanged",
+    "ids": [
+      1,
+      4,
+      7,
+      10
+    ],
+    "stats": [
+      "4",
+      "2",
+      "2",
+      "50.0%",
+      "4"
+    ],
+    "storage": null
+  },
+  "keyboard": {
+    "editFocus": "task-title",
+    "cancelFocus": "task-id",
+    "toggle": "true",
+    "tabAction": "edit"
+  }
+}

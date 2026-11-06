@@ -1,0 +1,547 @@
+{
+  "baseUrl": "http://127.0.0.1:56949/api",
+  "observations": [
+    {
+      "path": "/health",
+      "method": "GET",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/json; charset=utf-8",
+      "payload": {
+        "data": {
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "path": "/tasks",
+      "method": "GET",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/json; charset=utf-8",
+      "payload": {
+        "data": [
+          {
+            "id": 1,
+            "title": "Изучить функции",
+            "completed": true,
+            "priority": "medium",
+            "categoryId": 1
+          },
+          {
+            "id": 4,
+            "title": "Подготовить модель задач",
+            "completed": false,
+            "priority": "high",
+            "categoryId": 2
+          },
+          {
+            "id": 7,
+            "title": "Проверить методы массивов",
+            "completed": false,
+            "priority": "low",
+            "categoryId": 1
+          },
+          {
+            "id": 10,
+            "title": "Оформить README",
+            "completed": true,
+            "priority": "medium",
+            "categoryId": 3
+          },
+          {
+            "id": 13,
+            "title": "Разобрать Promise",
+            "completed": false,
+            "priority": "high",
+            "categoryId": 1
+          },
+          {
+            "id": 16,
+            "title": "Проверить учебный API",
+            "completed": true,
+            "priority": "high",
+            "categoryId": 2
+          },
+          {
+            "id": 19,
+            "title": "Описать контракт запросов",
+            "completed": false,
+            "priority": "medium",
+            "categoryId": 3
+          },
+          {
+            "id": 22,
+            "title": "Подготовить демонстрацию",
+            "completed": false,
+            "priority": "low",
+            "categoryId": 2
+          },
+          {
+            "id": 25,
+            "title": "Исправить обработку ошибок",
+            "completed": true,
+            "priority": "high",
+            "categoryId": 2
+          },
+          {
+            "id": 28,
+            "title": "Добавить фильтры API",
+            "completed": false,
+            "priority": "medium",
+            "categoryId": 2
+          },
+          {
+            "id": 31,
+            "title": "Сверить отчёт",
+            "completed": true,
+            "priority": "low",
+            "categoryId": 3
+          },
+          {
+            "id": 34,
+            "title": "Провести рефакторинг клиента",
+            "completed": false,
+            "priority": "high",
+            "categoryId": 2
+          }
+        ],
+        "meta": {
+          "total": 12,
+          "filters": {
+            "completed": null,
+            "priority": null,
+            "categoryId": null,
+            "q": ""
+          }
+        }
+      }
+    },
+    {
+      "path": "/tasks?completed=false&priority=high",
+      "method": "GET",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/json; charset=utf-8",
+      "payload": {
+        "data": [
+          {
+            "id": 4,
+            "title": "Подготовить модель задач",
+            "completed": false,
+            "priority": "high",
+            "categoryId": 2
+          },
+          {
+            "id": 13,
+            "title": "Разобрать Promise",
+            "completed": false,
+            "priority": "high",
+            "categoryId": 1
+          },
+          {
+            "id": 34,
+            "title": "Провести рефакторинг клиента",
+            "completed": false,
+            "priority": "high",
+            "categoryId": 2
+          }
+        ],
+        "meta": {
+          "total": 3,
+          "filters": {
+            "completed": false,
+            "priority": "high",
+            "categoryId": null,
+            "q": ""
+          }
+        }
+      }
+    },
+    {
+      "path": "/tasks/25",
+      "method": "GET",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/json; charset=utf-8",
+      "payload": {
+        "data": {
+          "id": 25,
+          "title": "Исправить обработку ошибок",
+          "completed": true,
+          "priority": "high",
+          "categoryId": 2
+        }
+      }
+    },
+    {
+      "path": "/tasks/999",
+      "method": "GET",
+      "status": 404,
+      "ok": false,
+      "contentType": "application/json; charset=utf-8",
+      "payload": {
+        "error": {
+          "code": "TASK_NOT_FOUND",
+          "message": "Задача с id 999 не найдена.",
+          "details": {
+            "id": 999
+          }
+        }
+      }
+    },
+    {
+      "path": "/categories",
+      "method": "GET",
+      "status": 200,
+      "ok": true,
+      "contentType": "application/json; charset=utf-8",
+      "payload": {
+        "data": [
+          {
+            "id": 1,
+            "name": "Учёба"
+          },
+          {
+            "id": 2,
+            "name": "Проект"
+          },
+          {
+            "id": 3,
+            "name": "Организация"
+          }
+        ],
+        "meta": {
+          "total": 3
+        }
+      }
+    }
+  ],
+  "errors": [
+    {
+      "name": "/tasks/999",
+      "kind": "http",
+      "status": 404,
+      "code": "TASK_NOT_FOUND",
+      "details": {
+        "id": 999
+      },
+      "url": "http://127.0.0.1:56949/api/tasks/999"
+    },
+    {
+      "name": "/debug/error",
+      "kind": "http",
+      "status": 503,
+      "code": "SERVICE_UNAVAILABLE",
+      "details": null,
+      "url": "http://127.0.0.1:56949/api/debug/error"
+    },
+    {
+      "name": "/debug/invalid-json",
+      "kind": "invalid-response",
+      "status": null,
+      "code": null,
+      "details": null,
+      "url": "http://127.0.0.1:56949/api/debug/invalid-json"
+    },
+    {
+      "name": "/debug/text",
+      "kind": "invalid-response",
+      "status": null,
+      "code": null,
+      "details": null,
+      "url": "http://127.0.0.1:56949/api/debug/text"
+    },
+    {
+      "name": "completed=yes",
+      "kind": "http",
+      "status": 400,
+      "code": "INVALID_QUERY",
+      "details": null,
+      "url": "http://127.0.0.1:56949/api/tasks?completed=yes"
+    },
+    {
+      "name": "timeout",
+      "kind": "timeout",
+      "status": null,
+      "code": null,
+      "details": null,
+      "url": "http://127.0.0.1:56949/api/debug/delay?ms=150"
+    },
+    {
+      "name": "abort",
+      "kind": "aborted",
+      "status": null,
+      "code": null,
+      "details": null,
+      "url": "http://127.0.0.1:56949/api/debug/delay?ms=150"
+    },
+    {
+      "name": "offline",
+      "kind": "network",
+      "status": null,
+      "code": null,
+      "details": null,
+      "url": "http://127.0.0.1:56949/api/health"
+    }
+  ],
+  "sequential": [
+    306.2,
+    310.5,
+    308.3
+  ],
+  "parallel": [
+    158.6,
+    157.4,
+    156
+  ],
+  "domain": {
+    "all": {
+      "tasks": [
+        {
+          "id": 1,
+          "title": "Изучить функции",
+          "completed": true,
+          "priority": "medium",
+          "categoryId": 1
+        },
+        {
+          "id": 4,
+          "title": "Подготовить модель задач",
+          "completed": false,
+          "priority": "high",
+          "categoryId": 2
+        },
+        {
+          "id": 7,
+          "title": "Проверить методы массивов",
+          "completed": false,
+          "priority": "low",
+          "categoryId": 1
+        },
+        {
+          "id": 10,
+          "title": "Оформить README",
+          "completed": true,
+          "priority": "medium",
+          "categoryId": 3
+        },
+        {
+          "id": 13,
+          "title": "Разобрать Promise",
+          "completed": false,
+          "priority": "high",
+          "categoryId": 1
+        },
+        {
+          "id": 16,
+          "title": "Проверить учебный API",
+          "completed": true,
+          "priority": "high",
+          "categoryId": 2
+        },
+        {
+          "id": 19,
+          "title": "Описать контракт запросов",
+          "completed": false,
+          "priority": "medium",
+          "categoryId": 3
+        },
+        {
+          "id": 22,
+          "title": "Подготовить демонстрацию",
+          "completed": false,
+          "priority": "low",
+          "categoryId": 2
+        },
+        {
+          "id": 25,
+          "title": "Исправить обработку ошибок",
+          "completed": true,
+          "priority": "high",
+          "categoryId": 2
+        },
+        {
+          "id": 28,
+          "title": "Добавить фильтры API",
+          "completed": false,
+          "priority": "medium",
+          "categoryId": 2
+        },
+        {
+          "id": 31,
+          "title": "Сверить отчёт",
+          "completed": true,
+          "priority": "low",
+          "categoryId": 3
+        },
+        {
+          "id": 34,
+          "title": "Провести рефакторинг клиента",
+          "completed": false,
+          "priority": "high",
+          "categoryId": 2
+        }
+      ],
+      "meta": {
+        "total": 12,
+        "filters": {
+          "completed": null,
+          "priority": null,
+          "categoryId": null,
+          "q": ""
+        }
+      }
+    },
+    "pendingHigh": {
+      "tasks": [
+        {
+          "id": 4,
+          "title": "Подготовить модель задач",
+          "completed": false,
+          "priority": "high",
+          "categoryId": 2
+        },
+        {
+          "id": 13,
+          "title": "Разобрать Promise",
+          "completed": false,
+          "priority": "high",
+          "categoryId": 1
+        },
+        {
+          "id": 34,
+          "title": "Провести рефакторинг клиента",
+          "completed": false,
+          "priority": "high",
+          "categoryId": 2
+        }
+      ],
+      "meta": {
+        "total": 3,
+        "filters": {
+          "completed": false,
+          "priority": "high",
+          "categoryId": null,
+          "q": ""
+        }
+      }
+    },
+    "task25": {
+      "id": 25,
+      "title": "Исправить обработку ошибок",
+      "completed": true,
+      "priority": "high",
+      "categoryId": 2
+    },
+    "initial": {
+      "tasks": [
+        {
+          "id": 4,
+          "title": "Подготовить модель задач",
+          "completed": false,
+          "priority": "high",
+          "categoryId": 2
+        },
+        {
+          "id": 13,
+          "title": "Разобрать Promise",
+          "completed": false,
+          "priority": "high",
+          "categoryId": 1
+        },
+        {
+          "id": 34,
+          "title": "Провести рефакторинг клиента",
+          "completed": false,
+          "priority": "high",
+          "categoryId": 2
+        }
+      ],
+      "meta": {
+        "total": 3,
+        "filters": {
+          "completed": false,
+          "priority": "high",
+          "categoryId": null,
+          "q": ""
+        }
+      },
+      "categories": [
+        {
+          "id": 1,
+          "name": "Учёба"
+        },
+        {
+          "id": 2,
+          "name": "Проект"
+        },
+        {
+          "id": 3,
+          "name": "Организация"
+        }
+      ]
+    },
+    "variantUrl": "http://127.0.0.1:56949/api/tasks?completed=true",
+    "variant": {
+      "tasks": [
+        {
+          "id": 1,
+          "title": "Изучить функции",
+          "completed": true,
+          "priority": "medium",
+          "categoryId": 1
+        },
+        {
+          "id": 10,
+          "title": "Оформить README",
+          "completed": true,
+          "priority": "medium",
+          "categoryId": 3
+        },
+        {
+          "id": 16,
+          "title": "Проверить учебный API",
+          "completed": true,
+          "priority": "high",
+          "categoryId": 2
+        },
+        {
+          "id": 25,
+          "title": "Исправить обработку ошибок",
+          "completed": true,
+          "priority": "high",
+          "categoryId": 2
+        },
+        {
+          "id": 31,
+          "title": "Сверить отчёт",
+          "completed": true,
+          "priority": "low",
+          "categoryId": 3
+        }
+      ],
+      "meta": {
+        "total": 5,
+        "filters": {
+          "completed": true,
+          "priority": null,
+          "categoryId": null,
+          "q": ""
+        }
+      }
+    }
+  },
+  "client": {
+    "code": 0,
+    "output": "Индивидуальный вариант 2\nФильтры: { completed: true, priority: null, categoryId: null, q: '' }\nПолучено задач: 5; время: 42.2 мс\n┌─────────┬────┬──────────────────────────────┬───────────┬──────────┬───────────────┐\n│ (index) │ id │ title                        │ completed │ priority │ category      │\n├─────────┼────┼──────────────────────────────┼───────────┼──────────┼───────────────┤\n│ 0       │ 1  │ 'Изучить функции'            │ true      │ 'medium' │ 'Учёба'       │\n│ 1       │ 10 │ 'Оформить README'            │ true      │ 'medium' │ 'Организация' │\n│ 2       │ 16 │ 'Проверить учебный API'      │ true      │ 'high'   │ 'Проект'      │\n│ 3       │ 25 │ 'Исправить обработку ошибок' │ true      │ 'high'   │ 'Проект'      │\n│ 4       │ 31 │ 'Сверить отчёт'              │ true      │ 'low'    │ 'Организация' │\n└─────────┴────┴──────────────────────────────┴───────────┴──────────┴───────────────┘\nКонтрольная ошибка 404: Тип: http · Задача с id 999 не найдена. · HTTP 404 · Код API: TASK_NOT_FOUND\n"
+  },
+  "clientOffline": {
+    "code": 1,
+    "output": "Тип: network · Не удалось получить корректный ответ API.\nПроверяемый адрес API: http://127.0.0.1:56949/api\n"
+  },
+  "clientRestarted": {
+    "code": 0,
+    "output": "Индивидуальный вариант 2\nФильтры: { completed: true, priority: null, categoryId: null, q: '' }\nПолучено задач: 5; время: 37.1 мс\n┌─────────┬────┬──────────────────────────────┬───────────┬──────────┬───────────────┐\n│ (index) │ id │ title                        │ completed │ priority │ category      │\n├─────────┼────┼──────────────────────────────┼───────────┼──────────┼───────────────┤\n│ 0       │ 1  │ 'Изучить функции'            │ true      │ 'medium' │ 'Учёба'       │\n│ 1       │ 10 │ 'Оформить README'            │ true      │ 'medium' │ 'Организация' │\n│ 2       │ 16 │ 'Проверить учебный API'      │ true      │ 'high'   │ 'Проект'      │\n│ 3       │ 25 │ 'Исправить обработку ошибок' │ true      │ 'high'   │ 'Проект'      │\n│ 4       │ 31 │ 'Сверить отчёт'              │ true      │ 'low'    │ 'Организация' │\n└─────────┴────┴──────────────────────────────┴───────────┴──────────┴───────────────┘\nКонтрольная ошибка 404: Тип: http · Задача с id 999 не найдена. · HTTP 404 · Код API: TASK_NOT_FOUND\n"
+  }
+}
